@@ -1,0 +1,28 @@
+<table border='1'>
+    <tr>
+    
+      <th>ItemName</th>
+      <th>ItemImage</th>
+      <th>ItemPrice</th>
+      <th>ItemDescription</th>
+      <th>ItemAddDate</th>
+       
+    </tr>
+    <tr>
+      <td>{{item.itemname}} </td>
+      <td>{{item.itemimage}}</td>
+      <td>{{item.itemprice | currency:'INR':true}}</td>
+      <td> {{item.itemdescription}}</td>
+      <td>{{item.itemadddate | date:'dd-MM-yyyy'}}</td>
+     
+      <td>  <button  type="button" (click)="EditItem(item)">Edit</button></td> 
+        <td>  <button  type="button" (click)="deleteItem()">Delete</button></td>
+   
+    </tr>
+    
+     </table>
+  
+    
+   
+   
+  

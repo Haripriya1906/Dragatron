@@ -1,0 +1,49 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Item Details</h3>
+                <form name="form">
+                    <div class="form-group">
+                        <label for="itemName">Item Name</label>
+                        <input type="text" class="form-control" name="itemname" [(ngModel)]="itemname" size="30" placeholder="Enter Itemname" required/>
+                         
+                    </div>
+                    <div class="form-group">
+                        <label for="itemImage">Item Image</label>
+                        <input type="text" class="form-control" name="itemimage" [(ngModel)]="itemimage" size="30" placeholder="Enter Itemimage" required />
+                         
+                    </div>
+                    <div class="form-group">
+                        <button type="button" (click)="togglePhotoPreview()" class="btn btn-primary">
+                            <!-- {{previewPhoto? "Hide": "show"}} preview -->show preview
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <img [src]="itemimage" height="20" width="20" *ngIf="previewPhoto?" 
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Item Price</label>
+                        <input type="text" class="form-control" name="itemprice" [(ngModel)]="itemprice" size="30" placeholder="Enter Itemprice" required />
+                         
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">Item Description</label>
+                        <input type=" textfield" class="form-control" name="itemdescription" [(ngModel)]="itemdescription"  size="30" placeholder="Enter description" required/>
+                         
+                    </div>
+                    <div class="form-group">
+                        <label for="itemAdddate">ItemAddDate</label>
+                        <input type="date" class="form-control" name="itemadddate" [(ngModel)]="itemadddate"  size="30" placeholder="Enter itemadddate" required />
+                         
+                    </div>
+                    <div class="form-group">
+                         
+                        <button type="button" class="btn btn-primary" (click)="saveItem()">Save</button>
+                        <!-- <button class="btn btn-primary"  (click)="cancelEmployee()">Cancel</button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>

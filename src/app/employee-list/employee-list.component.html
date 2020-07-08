@@ -1,0 +1,10 @@
+Search: <input id="input" type="text" size="30"  [(ngModel)]="listFilterBy">
+<!-- <button type="button"  (click)="addEmployee()">AddNew</button> -->
+<br/><br/>
+<h2>Item List</h2>
+ 
+ <div *ngFor='let item of filteredList'>
+      <app-employeedetail [item]='item' (refreshEmployeeList)="refreshList()">
+        </app-employeedetail>
+  </div>
+  
